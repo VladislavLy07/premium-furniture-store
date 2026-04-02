@@ -33,6 +33,9 @@ export function Header() {
           <IconButton label="Корзина">
             <ShoppingBag size={18} />
           </IconButton>
+          <IconButton label="Поиск" icon="⌕" />
+          <IconButton label="Избранное" icon="♡" />
+          <IconButton label="Корзина" icon="🛒" />
         </div>
       </div>
     </header>
@@ -40,6 +43,7 @@ export function Header() {
 }
 
 function IconButton({ children, label }: { children: ReactNode; label: string }) {
+function IconButton({ icon, label }: { icon: string; label: string }) {
   return (
     <button
       type="button"
@@ -47,6 +51,9 @@ function IconButton({ children, label }: { children: ReactNode; label: string })
       className="rounded-full border border-[#e3d4bf] bg-[#fffaf3] p-2.5 text-[#5d4736] transition-colors hover:bg-[#f1e4d2]"
     >
       {children}
+      <span aria-hidden="true" className="inline-block min-w-5 text-center text-base">
+        {icon}
+      </span>
     </button>
   );
 }

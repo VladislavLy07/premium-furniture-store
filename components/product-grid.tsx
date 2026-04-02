@@ -29,6 +29,7 @@ export function ProductGrid() {
             <p className="mt-2 text-sm text-[#6e5949]">{product.description}</p>
             <div className="mt-3 flex items-center gap-1 text-sm text-[#a27647]">
               <Star aria-hidden="true" size={14} fill="currentColor" />
+              <span aria-hidden="true">★</span>
               <span>{product.rating}</span>
             </div>
 
@@ -40,6 +41,7 @@ export function ProductGrid() {
                 className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#4a3528] px-4 py-3 text-sm font-semibold text-[#fff8ef] transition-colors hover:bg-[#3a281d]"
               >
                 <ShoppingCart aria-hidden="true" size={16} />
+                <span aria-hidden="true">🛒</span>
                 В корзину
               </button>
               <button
@@ -48,6 +50,7 @@ export function ProductGrid() {
                 className="rounded-xl border border-[#e0d0bb] bg-[#f8efe3] px-3 text-[#5f4938] transition-colors hover:bg-[#efdfcf]"
               >
                 <Heart aria-hidden="true" size={18} />
+                <span aria-hidden="true">♡</span>
               </button>
             </div>
           </article>
