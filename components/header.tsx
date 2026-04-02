@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { Heart, Search, ShoppingBag } from 'lucide-react';
 
 const menuItems = ['Главная', 'Каталог', 'Коллекции', 'О нас', 'Контакты'];
@@ -38,7 +39,7 @@ export function Header() {
   );
 }
 
-function IconButton({ children, label }: { children: React.ReactNode; label: string }) {
+function IconButton({ children, label }: { children: ReactNode; label: string }) {
   return (
     <button
       type="button"
