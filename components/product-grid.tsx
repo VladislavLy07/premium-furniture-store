@@ -1,3 +1,4 @@
+import { Heart, ShoppingCart, Star } from 'lucide-react';
 import { products } from '@/lib/products';
 
 export function ProductGrid() {
@@ -27,6 +28,7 @@ export function ProductGrid() {
             <h3 className="mt-4 text-2xl font-medium leading-tight">{product.name}</h3>
             <p className="mt-2 text-sm text-[#6e5949]">{product.description}</p>
             <div className="mt-3 flex items-center gap-1 text-sm text-[#a27647]">
+              <Star aria-hidden="true" size={14} fill="currentColor" />
               <span aria-hidden="true">★</span>
               <span>{product.rating}</span>
             </div>
@@ -38,6 +40,7 @@ export function ProductGrid() {
                 type="button"
                 className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-[#4a3528] px-4 py-3 text-sm font-semibold text-[#fff8ef] transition-colors hover:bg-[#3a281d]"
               >
+                <ShoppingCart aria-hidden="true" size={16} />
                 <span aria-hidden="true">🛒</span>
                 В корзину
               </button>
@@ -46,6 +49,7 @@ export function ProductGrid() {
                 aria-label={`Добавить ${product.name} в избранное`}
                 className="rounded-xl border border-[#e0d0bb] bg-[#f8efe3] px-3 text-[#5f4938] transition-colors hover:bg-[#efdfcf]"
               >
+                <Heart aria-hidden="true" size={18} />
                 <span aria-hidden="true">♡</span>
               </button>
             </div>

@@ -1,3 +1,6 @@
+import type { ReactNode } from 'react';
+import { Heart, Search, ShoppingBag } from 'lucide-react';
+
 const menuItems = ['Главная', 'Каталог', 'Коллекции', 'О нас', 'Контакты'];
 
 export function Header() {
@@ -21,6 +24,15 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <IconButton label="Поиск">
+            <Search size={18} />
+          </IconButton>
+          <IconButton label="Избранное">
+            <Heart size={18} />
+          </IconButton>
+          <IconButton label="Корзина">
+            <ShoppingBag size={18} />
+          </IconButton>
           <IconButton label="Поиск" icon="⌕" />
           <IconButton label="Избранное" icon="♡" />
           <IconButton label="Корзина" icon="🛒" />
@@ -30,6 +42,7 @@ export function Header() {
   );
 }
 
+function IconButton({ children, label }: { children: ReactNode; label: string }) {
 function IconButton({ icon, label }: { icon: string; label: string }) {
   return (
     <button
@@ -37,6 +50,7 @@ function IconButton({ icon, label }: { icon: string; label: string }) {
       aria-label={label}
       className="rounded-full border border-[#e3d4bf] bg-[#fffaf3] p-2.5 text-[#5d4736] transition-colors hover:bg-[#f1e4d2]"
     >
+      {children}
       <span aria-hidden="true" className="inline-block min-w-5 text-center text-base">
         {icon}
       </span>

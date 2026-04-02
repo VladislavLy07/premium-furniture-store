@@ -1,3 +1,5 @@
+import { Award } from 'lucide-react';
+
 export function HeroSection() {
   return (
     <section className="container-card relative grid gap-8 overflow-hidden p-6 md:grid-cols-2 md:p-10" id="top">
@@ -36,6 +38,7 @@ export function HeroSection() {
       </div>
 
       <div className="absolute bottom-6 right-6 flex items-center gap-3 rounded-2xl border border-[#eadcc9] bg-[#f8f1e7]/95 px-4 py-3 text-[#5f4937] shadow-soft">
+        <Award aria-hidden="true" className="text-[#b18b5f]" size={20} />
         <span aria-hidden="true" className="text-xl text-[#b18b5f]">✦</span>
         <span className="text-sm font-medium md:text-base">Премиальная коллекция 2026</span>
       </div>
